@@ -1,6 +1,6 @@
 'use strict';
 
-const { _filter, _get } = require('./utils'),
+const { _filter, _get, _set } = require('./utils'),
     testArray = [ 12,5,3,6,78],
     testObject = {
         user: {
@@ -20,4 +20,6 @@ const { _filter, _get } = require('./utils'),
         }
     }
 
-console.log(_get(testObject, 'user.likes[0].name'));
+console.log(_get(testObject, 'user.name.first'));
+_set(testObject, 'user.likes[0].name', 'Music')
+console.log(testObject)
