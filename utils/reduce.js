@@ -8,10 +8,10 @@
  * @returns {Array}
  */
 function reduce(array, callback, initialValue) {
-  let beforeValue = initialValue,
+  let beforeValue = initialValue || array[0],
     currentValue;
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = (initialValue) ? 0 : 1; i < array.length; i++) {
     currentValue = array[i];
     beforeValue = callback(beforeValue, currentValue);
   }
