@@ -21,5 +21,5 @@ const { _filter, _get, _set } = require('./utils'),
     }
 
 console.log(_get(testObject, 'user.name.first'));
-_set(testObject, 'user.likes[0].name', 'Music')
+_set(testObject, 'user.friends[0].name', 'Jonh Doe')
 console.log(testObject)

@@ -1,9 +1,11 @@
 'use strict';
 
-const _get = require('./get');
+function isNumber(value) {
+    return (parseInt(value) >= 0 || parseInt(value) <= 0);
+}
 
-function isNumber(string) {
-    return parseInt(string) >= 0;
+function isUndefined(value) {
+ return typeof value === 'undefined'
 }
 
 function objOrArray(string) {
@@ -30,7 +32,7 @@ function set(object, path, value) {
     for(let i = 0; i < pathArray.length;i++) {
         newPath += `['${pathArray[i]}']`;
 
-        if (typeof object[pathArray[i]] === 'undefined') {
+        if (isUndefined(object[pathArray[i]])) {
             eval(`object${newPath} = ${objOrArray(pathArray[i+1])}`)
         }
     }
