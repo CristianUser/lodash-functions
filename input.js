@@ -13,7 +13,7 @@ h(process.stdin)
   .map(parseJSON)
   .map(op => new h(op))
   .merge()
-  .ratelimit(1, 5000)
+  .ratelimit(2, 5000)
   .each(sendEmail)
 
 function sendEmail({ name, email, partner}) {

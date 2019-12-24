@@ -8,15 +8,15 @@
  * @returns {Array}
  */
 function reduce(array, callback, initialValue) {
-  let beforeValue = initialValue || array[0],
+  let previousValue = initialValue || array[0],
     currentValue;
 
   for (let i = (initialValue) ? 0 : 1; i < array.length; i++) {
     currentValue = array[i];
-    beforeValue = callback(beforeValue, currentValue);
+    previousValue = callback(previousValue, currentValue);
   }
 
-  return beforeValue;
+  return previousValue;
 }
 
 module.exports = reduce;
