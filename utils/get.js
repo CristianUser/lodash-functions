@@ -7,6 +7,7 @@ const _isUndefined = require('./isUndefined');
  * @param {Object} object
  * @param {string} path properties path
  * @param {any} defaultValue used to return in case not found
+ * @returns {Object} value
  */
 function get(object, path, defaultValue) {
   path = path.replace('[', '.').replace(']', '');

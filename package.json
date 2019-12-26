@@ -1,6 +1,6 @@
 {
   "name": "pedro-test",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,5 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.2"
-  },
-  "dependencies": {
-    "highland": "^2.13.5",
-    "lodash": "^4.17.15"
   }
 }

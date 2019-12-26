@@ -5,7 +5,7 @@
  * @param {Array} array
  * @param {Function} callback
  * @param {any} initialValue
- * @returns {Array}
+ * @returns {any}
  */
 function reduce(array, callback, initialValue) {
   let previousValue = initialValue || array[0],
