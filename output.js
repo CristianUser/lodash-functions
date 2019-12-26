@@ -3,16 +3,16 @@
 const testObject = {
   user: {
     name: {
-      first: "Cristian"
+      first: 'Cristian'
     },
     likes: [
       {
-        name: "Music",
-        value: "music"
+        name: 'Music',
+        value: 'music'
       },
       {
-        name: "Dance",
-        value: "dance"
+        name: 'Dance',
+        value: 'dance'
       }
     ]
   }

@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const { _reduce, _filter, _get, _set, _some } = require("./utils"),
+const { _reduce, _filter, _get, _set, _some, _find } = require('./utils'),
   testArray = [12, 5, 3, 6, 78],
   users = [
     { id: 11, name: 'Adam', age: 23, group: 'editor' },
@@ -19,3 +19,5 @@ console.log(_reduce(users, (prev, curr) => {
   }
 return prev;
 }, []));
+
+console.log(_get(users, '0.name.d'))

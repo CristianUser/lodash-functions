@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 /**
- * Calls a defined callback function on each element of an array, and returns an array that contains the results.
+ * Calls a defined callback function on each element of an array to check if one of the elements returns true.
  * @param {Array} array
  * @param {Function} callback
- * @returns {Array}
+ * @returns {boolean}
  */
 function some(array, callback) {
   for (let i = 0; i < array.length; i++) {

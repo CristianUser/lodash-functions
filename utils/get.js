@@ -1,4 +1,6 @@
-"use strict";
+'use strict';
+
+const _isUndefined = require('./isUndefined');
 
 /**
  * Returns property value
@@ -7,8 +9,9 @@
  * @param {any} defaultValue used to return in case not found
  */
 function get(object, path, defaultValue) {
-  path = path.replace("[", ".").replace("]", "");
-  const pathArray = path.split(".");
+  path = path.replace('[', '.').replace(']', '');
+  const pathArray = path.split('.');
+
   for (let i = 0; i < pathArray.length; i++) {
     try {
       object = object[pathArray[i]];
@@ -16,7 +19,7 @@ function get(object, path, defaultValue) {
       return defaultValue;
     }
   }
-  return object;
+  return _isUndefined(object) ? defaultValue : object;
 }
 
 module.exports = get;

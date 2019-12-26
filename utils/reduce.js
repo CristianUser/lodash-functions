@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * Calls a defined callback function on each item and returns one value as result of the iteration of the callback
